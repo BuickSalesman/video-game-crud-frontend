@@ -8,12 +8,14 @@ import { LogoutLink } from "./LogoutLink";
 function App() {
   return (
     <div>
-      <Header />
+      <div className="flex flex-row items-center justify-start space-x-4 p-4 bg-gray-100">
+        <Header />
+        <Signup />
+        <Login />
+        <LogoutLink />
+      </div>
       <Content />
       <Footer />
-      <Signup />
-      <Login />
-      <LogoutLink />
     </div>
   );
 }
