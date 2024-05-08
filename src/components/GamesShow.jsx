@@ -11,7 +11,7 @@ export function GamesShow(props) {
 
   return (
     <div className="bg-gray-900 text-gray-300 p-4">
-      <h1 className="text-xl font-bold text-blue-500 mb-3">Photo Information</h1>
+      <h1 className="text-xl font-bold text-blue-500 mb-3"> Information</h1>
       <div className="mb-4">
         <p>Title: {props.game.title}</p>
         <p>Image: {props.game.image}</p>

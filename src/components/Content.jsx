@@ -52,7 +52,7 @@ export function Content() {
   const handleDestroyGame = (game) => {
     console.log("handleDestroyGame", game);
     axios.delete(`http://localhost:3000/games/${game.id}.json`).then((response) => {
-      setPhotos(games.filter((p) => p.id !== game.id));
+      setGames(games.filter((p) => p.id !== game.id));
       handleClose();
     });
   };
