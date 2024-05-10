@@ -1,9 +1,9 @@
-import { Header } from "./Header";
-import { Content } from "./Content";
-import { Footer } from "./Footer";
-import { Signup } from "./Signup";
-import { Login } from "./Login";
-import { LogoutLink } from "./LogoutLink";
+import { Header } from "./components/Header";
+import { Content } from "./components/Content";
+import { Footer } from "./components/Footer";
+import { Signup } from "./components/Signup";
+import { Login } from "./components/Login";
+import { LogoutLink } from "./components/LogoutLink";
 
 function App() {
   return (
@@ -21,3 +21,5 @@ function App() {
 }
 
 export default App;
+
+// i worked on this today but just didn't code anything
