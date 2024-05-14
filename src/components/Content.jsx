@@ -66,6 +66,7 @@ export function Content() {
 
   return (
     <div>
+      <>form goes here</>
       <GamesNew onCreateGame={handleCreateGame} />
       <GamesIndex games={games} onShowGame={handleShowGame} />
       <Modal show={isGamesShowVisible} onClose={handleClose}>
@@ -74,3 +75,5 @@ export function Content() {
     </div>
   );
 }
+
+// i worked on this today i just havent written any code yet
