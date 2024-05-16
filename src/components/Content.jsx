@@ -1,4 +1,6 @@
 import axios from "axios";
+import ReactDatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { useState, useEffect } from "react";
 import { GamesIndex } from "./GamesIndex";
 import { GamesNew } from "./GamesNew";
@@ -9,6 +11,7 @@ export function Content() {
   const [games, setGames] = useState([]);
   const [isGamesShowVisible, setIsGamesShowVisible] = useState(false);
   const [currentGame, setCurrentGame] = useState({});
+  const [date, setDate] = useState(new Date());
 
   const handleIndexGames = () => {
     console.log("handleIndexGames");
@@ -64,9 +67,20 @@ export function Content() {
 
   useEffect(handleIndexGames, []);
 
+  // const handleDateSelect = (e) => {
+  //   console.log(e.target);
+  // };
+
+  const handleDateChange = (date) => {
+    setDate(date);
+    console.log(date);
+  };
+
   return (
     <div>
-      <>form goes here</>
+      <div className="ml-12">
+        <ReactDatePicker showIcon selected={date} onChange={(date) => handleDateChange(date)} />
+      </div>
       <GamesNew onCreateGame={handleCreateGame} />
       <GamesIndex games={games} onShowGame={handleShowGame} />
       <Modal show={isGamesShowVisible} onClose={handleClose}>
