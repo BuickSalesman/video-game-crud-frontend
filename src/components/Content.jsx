@@ -67,14 +67,23 @@ export function Content() {
 
   useEffect(handleIndexGames, []);
 
-  // const handleDateSelect = (e) => {
-  //   console.log(e.target);
-  // };
-
   const handleDateChange = (date) => {
     setDate(date);
-    console.log(date);
+
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+
+    axios
+      .get(`http://localhost:3000/games/games_by_date`) //?month=${month}&day=${day} <-- put this after the url later
+      .then((response) => {
+        setGames(response.data); //the name setGames may need to change here?
+      })
+      .catch((error) => {
+        console.error("Error fetching games by date:", error);
+      });
   };
+
+  //WE HAVE CONNECTION TO THE OTHER SIDE!! it just doesnt work....
 
   return (
     <div>
@@ -89,5 +98,3 @@ export function Content() {
     </div>
   );
 }
-
-// i worked on this today i just havent written any code yet
