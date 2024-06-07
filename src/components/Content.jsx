@@ -84,6 +84,7 @@ export function Content() {
   };
 
   //WE HAVE CONNECTION TO THE OTHER SIDE!! it just doesnt work....
+  //Joined the discord for igdb maybe this will help
 
   return (
     <div>
